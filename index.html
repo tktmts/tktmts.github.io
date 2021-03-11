@@ -6,8 +6,23 @@
 </head>
 <body>
     <div id="start">
-        <textarea id="code" rows="20" cols="20" wrap="soft">  </textarea>
+        <textarea id="Name" rows="20" cols="20" wrap="soft">  </textarea>
         <p> <input type="button" value="转换" onclick="docode()" /></p>
     </div>
 </body>
+<script>
+function docode(){
+    x=document.getElementById("Name");
+    S=x.value;
+for(i=0;i<HanWen.length;i++){
+    S=StrReplace(S,Riwen[i],HanWen[i]);
+}
+x.value=S;
+}
+function StrReplace(Str,a,b){
+return Str.split(a).join(b);
+}
+Riwen="ァアィイゥウェエォオカガキギクグケゲコゴサザシジスズセゼソゾタダチヂッツヅテデトドナニヌネノハバパヒビピフブプヘベペホボポマミムメモャヤュユョヨラリルレロヮワン"
+HanWen="娅娅伊伊舞舞愛愛奥奥卡加琪祈玖虹圭夏可可佐佐诗妮司司世世素枣塔妲祈祈 紫紫德德桐桐娜妮努祢乃慧芭芭比比比芙卜朴慧慧慧虹白白麻祢姆埋姆娅娅月月优优拉莉露蕾萝琶琶 "
+</script>
 </html>
